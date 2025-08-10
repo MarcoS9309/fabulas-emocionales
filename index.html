@@ -2,31 +2,134 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Fábulas Emocionales</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fábulas Emocionales - Descubre fábulas de Esopo y cuentos inspiradores según tu estado emocional. Una experiencia terapéutica y reflexiva.">
+    <meta name="keywords" content="fábulas, emociones, Esopo, bienestar, terapia, reflexión, cuentos">
+    <meta name="author" content="Marco Vinicio">
+    <title>Fábulas Emocionales - Cuentos que sanan el alma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
 </head>
 <body>
-    <h1>¿Cómo te sientes hoy?</h1>
-    <div class="botones">
-        <button onclick="mostrarFabula('bien')">Bien 😊</button>
-        <button onclick="mostrarFabula('mal')">Mal 😞</button>
+    <div class="container">
+        <header>
+            <h1>¿Cómo te sientes hoy?</h1>
+            <p class="subtitle">Comparte tu emoción y descubre una fábula que te acompañe</p>
+        </header>
+
+        <main>
+            <!-- Sección de entrada de emociones -->
+            <section class="emotion-input">
+                <label for="emotion-text">💭 Cuéntame, ¿cómo te sientes hoy?</label>
+                <input 
+                    type="text" 
+                    id="emotion-text" 
+                    placeholder="Por ejemplo: 'estoy triste', 'me siento genial', 'tengo ansiedad'..."
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <div class="buttons">
+                    <button id="analizar-btn">🔍 Encontrar mi fábula</button>
+                </div>
+            </section>
+
+            <!-- Separador con botones rápidos -->
+            <section class="quick-options">
+                <div class="buttons">
+                    <p>¿Prefieres una opción rápida?</p>
+                    <button id="bien-btn">😊 Me siento bien</button>
+                    <button id="mal-btn">😞 Me siento mal</button>
+                </div>
+            </section>
+
+            <!-- Área de respuesta -->
+            <section id="respuesta" aria-live="polite"></section>
+        </main>
+
+        <footer>
+            <p>Creado con ❤️ por <strong>Marco Vinicio</strong> | Inspirado en las atemporales Fábulas de Esopo</p>
+        </footer>
     </div>
 
-    <div id="respuesta"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html la            <!-- Sección de entrada de emociones -->
+            <section class="emotion-input">
+                <label for="emotion-text">💭 Cuéntame, ¿cómo te sientes hoy?</label>
+                <input 
+                    type="text" 
+                    id="emotion-text" 
+                    placeholder="Por ejemplo: 'estoy triste', 'me siento genial', 'tengo ansiedad'..."
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <div class="buttons">
+                    <button id="analizar-btn">🔍 Encontrar mi fábula</button>
+                </div>
+            </section>
 
-    <script>
-        const fabulas = {
-            bien: [
-                "El león y el ratón — Un día, un león dormía plácidamente cuando un pequeño ratón corrió sobre su cuerpo. El león lo atrapó con su enorme garra. El ratón suplicó por su vida y el león, condescendiente, lo dejó ir. Días después, el león fue atrapado en una red. El ratón, al escucharlo rugir, corrió y mordisqueó las cuerdas hasta liberarlo. Moraleja: Ningún acto de bondad es insignificante.",
-                "La liebre y la tortuga — La liebre se burlaba constantemente de la lenta tortuga. Un día decidieron competir. La liebre corrió velozmente y, confiada, se detuvo a dormir. La tortuga, paso a paso, continuó hasta cruzar la meta. Al despertar, la liebre vio que había perdido. Moraleja: La constancia supera a la presunción.",
-                "El ruiseñor y el halcón — Un halcón atrapó a un pequeño ruiseñor que lloraba por su vida. El halcón dudó: “¿Para qué me sirve comerte, tan pequeño?”. El ruiseñor respondió: “Al menos te daré belleza en el canto y poesía en el alma”. Moraleja: La belleza también alimenta el espíritu.",
-                "El pavo real y la grulla — El pavo real presumía de su colorido plumaje frente a la grulla. Esta respondió: “Es cierto que eres hermoso, pero yo puedo volar libre hasta las nubes, y tú no”. Moraleja: Lo esencial a veces no se ve a simple vista.",
-                "El león enfermo y el zorro — El león, anciano y débil, pedía que lo visitaran. Muchos animales entraban a su cueva, pero no salían. El zorro, astuto, notó muchas huellas de entrada y ninguna de salida. Se negó a entrar. Moraleja: La prudencia evita peligros innecesarios.",
-                "Las abejas y el zángano — Un zángano exigía miel diciendo ser parte del trabajo. Las abejas se indignaron: “Tú no trabajas, no ayudas, no construyes”. Lo expulsaron de la colmena. Moraleja: El esfuerzo compartido es lo que da valor a los logros.",
-                "La paloma y la hormiga — Una paloma salvó a una hormiga de ahogarse. Días después, un cazador apuntaba a la paloma, y la hormiga lo mordió en el pie, permitiendo que la paloma escapara. Moraleja: La bondad vuelve cuando menos lo esperas.",
-                "El perro y su reflejo — Un perro cruzaba un río con un hueso en la boca. Al mirar al agua, vio su reflejo y creyó que otro perro tenía un hueso más grande. Lo soltó para arrebatárselo y perdió el suyo. Moraleja: No pierdas lo que tienes por codicia.",
-                "La gallina de los huevos de oro — Un campesino tenía una gallina que ponía huevos de oro. Impaciente por obtener más, la mató para buscar todo el oro dentro... pero no había nada. Moraleja: La avaricia rompe el saco.",
-                "El caballo y el asno — Un caballo se negó a ayudar a un asno fatigado. Poco después, el asno murió de cansancio y el dueño puso toda la carga sobre el caballo. Moraleja: Si no ayudas hoy, mañana cargarás más solo."
+            <!-- Separador con botones rápidos -->
+            <section class="quick-options">
+                <div class="buttons">
+                    <p>¿Prefieres una opción rápida?</p>
+                    <button id="bien-btn">😊 Me siento bien</button>
+                    <button id="mal-btn">😞 Me siento mal</button>
+                </div>
+            </section><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fábulas Emocionales - Descubre fábulas de Esopo y cuentos inspiradores según tu estado emocional. Una experiencia terapéutica y reflexiva.">
+    <meta name="keywords" content="fábulas, emociones, Esopo, bienestar, terapia, reflexión, cuentos">
+    <meta name="author" content="Marco Vinicio">
+    
+    <title>Fábulas Emocionales - Cuentos que sanan el alma</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon básico -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¿Cómo te sientes hoy?</h1>
+            <p class="subtitle">Comparte tu emoción y descubre una fábula que te acompañe</p>
+        </header>
+
+        <main>
+            <!-- Sección de entrada de emociones -->
+            <section class="emotion-input">
+                <label for="emotion-text">Escribe cómo te sientes (ej: "estoy triste", "me siento genial", "estoy confundido"):</label>
+                <input 
+                    type="text" 
+                    id="emotion-text" 
+                    placeholder="Expresa tu emoción con tus propias palabras..."
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <div class="buttons">
+                    <button id="analizar-btn">🔍 Encontrar mi fábula</button>
+                </div>
+            </section>
+
+            <!-- Botones rápidos -->
+            <section class="buttons">
+                <p style="margin-bottom: 1em; color: var(--color-text-light);">O elige una opción rápida:</p>
+                <button id="bien-btn">😊 Me siento bien</button>
+                <button id="mal-btn">😞 Me siento mal</button>
+            </section>
+
+            <!-- Área de respuesta -->
+            <section id="respuesta" aria-live="polite"></section>
+        </main>
+
+        <footer>
+            <p>Creado con ❤️ por <strong>Marco Vinicio</strong> | Inspirado en las atemporales Fábulas de Esopo</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+        
             ],
             mal: [
                 "El zorro y las uvas — Un zorro hambriento intentó alcanzar unas uvas altas sin éxito. Tras muchos saltos fallidos, se alejó murmurando: 'Seguro están verdes'. Moraleja: Es fácil despreciar lo que no se puede conseguir.",

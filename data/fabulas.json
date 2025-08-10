@@ -1,0 +1,222 @@
+{
+  "emociones": {
+    "bien": {
+      "sinonimos": ["bien", "feliz", "contento", "alegre", "genial", "excelente", "fantástico", "radiante", "optimista", "satisfecho"],
+      "tipo": "positiva",
+      "descripcion": "Estado de bienestar y felicidad"
+    },
+    "mal": {
+      "sinonimos": ["mal", "triste", "deprimido", "desanimado", "abatido", "melancólico", "dolido", "afligido"],
+      "tipo": "negativa",
+      "descripcion": "Estado de tristeza o malestar"
+    },
+    "ansioso": {
+      "sinonimos": ["ansioso", "nervioso", "preocupado", "inquieto", "agitado", "estresado", "tenso", "agobiado"],
+      "tipo": "negativa",
+      "descripcion": "Estado de ansiedad y preocupación"
+    },
+    "enojado": {
+      "sinonimos": ["enojado", "furioso", "molesto", "irritado", "enfadado", "colérico", "rabioso", "iracundo"],
+      "tipo": "negativa",
+      "descripcion": "Estado de ira y frustración"
+    },
+    "confundido": {
+      "sinonimos": ["confundido", "perdido", "desorientado", "dudoso", "indeciso", "perplejo", "desconcertado"],
+      "tipo": "neutra",
+      "descripcion": "Estado de confusión y dudas"
+    },
+    "agradecido": {
+      "sinonimos": ["agradecido", "reconocido", "bendecido", "afortunado", "grato", "dichoso"],
+      "tipo": "positiva",
+      "descripcion": "Estado de gratitud y reconocimiento"
+    },
+    "solo": {
+      "sinonimos": ["solo", "solitario", "aislado", "abandonado", "desamparado", "incomprendido"],
+      "tipo": "negativa",
+      "descripcion": "Estado de soledad y aislamiento"
+    },
+    "motivado": {
+      "sinonimos": ["motivado", "inspirado", "entusiasmado", "decidido", "empoderado", "energizado"],
+      "tipo": "positiva",
+      "descripcion": "Estado de motivación y energía"
+    }
+  },
+  "fabulas": {
+    "bien": [
+      {
+        "titulo": "El león y el ratón",
+        "autor": "Esopo",
+        "contenido": "Un día, un león dormía plácidamente cuando un pequeño ratón corrió sobre su cuerpo. El león lo atrapó con su enorme garra. El ratón suplicó por su vida y el león, condescendiente, lo dejó ir. Días después, el león fue atrapado en una red. El ratón, al escucharlo rugir, corrió y mordisqueó las cuerdas hasta liberarlo.",
+        "moraleja": "Ningún acto de bondad es insignificante."
+      },
+      {
+        "titulo": "La liebre y la tortuga",
+        "autor": "Esopo",
+        "contenido": "La liebre se burlaba constantemente de la lenta tortuga. Un día decidieron competir. La liebre corrió velozmente y, confiada, se detuvo a dormir. La tortuga, paso a paso, continuó hasta cruzar la meta. Al despertar, la liebre vio que había perdido.",
+        "moraleja": "La constancia supera a la presunción."
+      },
+      {
+        "titulo": "El ruiseñor y el halcón",
+        "autor": "Esopo",
+        "contenido": "Un halcón atrapó a un pequeño ruiseñor que lloraba por su vida. El halcón dudó: '¿Para qué me sirve comerte, tan pequeño?'. El ruiseñor respondió: 'Al menos te daré belleza en el canto y poesía en el alma'.",
+        "moraleja": "La belleza también alimenta el espíritu."
+      },
+      {
+        "titulo": "La paloma y la hormiga",
+        "autor": "Esopo",
+        "contenido": "Una paloma salvó a una hormiga de ahogarse. Días después, un cazador apuntaba a la paloma, y la hormiga lo mordió en el pie, permitiendo que la paloma escapara.",
+        "moraleja": "La bondad vuelve cuando menos lo esperas."
+      },
+      {
+        "titulo": "El jardinero sabio",
+        "autor": "Marco Vinicio",
+        "contenido": "Un jardinero plantó dos árboles idénticos. A uno lo regó con amor y paciencia cada día. Al otro solo cuando recordaba. Con el tiempo, el primer árbol floreció hermoso y fuerte, mientras el segundo apenas sobrevivía. Un visitante preguntó la diferencia. 'Ambos recibieron agua', dijo el jardinero, 'pero solo uno recibió constancia y cariño'.",
+        "moraleja": "El cuidado constante hace florecer lo que amamos."
+      }
+    ],
+    "mal": [
+      {
+        "titulo": "El zorro y las uvas",
+        "autor": "Esopo",
+        "contenido": "Un zorro hambriento intentó alcanzar unas uvas altas sin éxito. Tras muchos saltos fallidos, se alejó murmurando: 'Seguro están verdes'.",
+        "moraleja": "Es fácil despreciar lo que no se puede conseguir."
+      },
+      {
+        "titulo": "El cisne y el búho",
+        "autor": "Esopo", 
+        "contenido": "El búho se burlaba del canto del cisne. Este respondió: 'Yo canto en la luz del día, tú sólo en la oscuridad. Ambos tenemos nuestro momento'.",
+        "moraleja": "Cada uno tiene su tiempo para brillar."
+      },
+      {
+        "titulo": "El sauce que lloró lágrimas de luz",
+        "autor": "Marco Vinicio",
+        "contenido": "Un sauce lloraba constantemente porque creía que era inútil. Sus lágrimas caían al río día y noche. Un día, una niña perdida en la tormenta se refugió bajo sus ramas. Las lágrimas del sauce, al tocar la tierra, se convirtieron en pequeñas luces que guiaron a la niña de vuelta a casa. 'Gracias', susurró ella. El sauce comprendió que incluso su tristeza podía iluminar el camino de otros.",
+        "moraleja": "Hasta en nuestros momentos más oscuros, podemos ser luz para alguien más."
+      },
+      {
+        "titulo": "La mariposa de alas rotas",
+        "autor": "Marco Vinicio",
+        "contenido": "Una mariposa perdió un ala en una tormenta y creyó que nunca más podría volar. Se refugió en una flor, sintiéndose inútil. Pero pronto descubrió que podía bailar de flor en flor de una manera única y hermosa. Las abejas la admiraban y los niños se detenían a verla. Su nueva forma de moverse era más graciosa que cualquier vuelo.",
+        "moraleja": "A veces nuestras heridas nos enseñan nuevas formas de ser hermosos."
+      }
+    ],
+    "ansioso": [
+      {
+        "titulo": "Las ranas que pedían rey",
+        "autor": "Esopo",
+        "contenido": "Las ranas vivían libres pero pidieron un rey. Zeus les envió un tronco. Lo despreciaron por inútil. Pidieron otro y Zeus les envió una garza... que comenzó a devorarlas.",
+        "moraleja": "Cuidado con lo que deseas."
+      },
+      {
+        "titulo": "El colibrí y la tormenta",
+        "autor": "Marco Vinicio",
+        "contenido": "Un colibrí se angustiaba viendo las nubes negras acercarse. Voló frenéticamente buscando refugio, agotándose. Una anciana lechuza le dijo: 'Pequeño, las tormentas pasan, pero si gastas toda tu energía luchando contra lo inevitable, no tendrás fuerzas para volar cuando escampe'. El colibrí se refugió pacientemente y cuando pasó la tormenta, voló más alto que nunca.",
+        "moraleja": "No gastes tu energía luchando contra lo que no puedes controlar."
+      }
+    ],
+    "enojado": [
+      {
+        "titulo": "El lobo y el cordero",
+        "autor": "Esopo",
+        "contenido": "Un cordero bebía en un río y un lobo, buscando pretexto para devorarlo, lo acusó de ensuciar el agua. Aunque el cordero argumentó con lógica, el lobo lo devoró igual.",
+        "moraleja": "La fuerza sin justicia es crueldad."
+      },
+      {
+        "titulo": "El volcán y el río",
+        "autor": "Marco Vinicio",
+        "contenido": "Un volcán estaba furioso y escupía lava destruyendo todo a su paso. Un río sereno pasaba cerca y le dijo: 'Tu ira solo crea desolación. Mira cómo mi fluir constante ha creado valles fértiles y vida'. El volcán reflexionó y aprendió a canalizar su fuerza: cuando erupcionaba, creaba nuevas tierras donde la vida florecía con más vigor.",
+        "moraleja": "La ira canalizada puede crear, la ira ciega solo destruye."
+      }
+    ],
+    "confundido": [
+      {
+        "titulo": "El búho y el águila",
+        "autor": "Esopo",
+        "contenido": "El águila presumía de su fuerza y vista. El búho respondió: 'Yo no vuelo tan alto, pero veo en la oscuridad, donde tú no'.",
+        "moraleja": "Cada virtud es única. No necesitas brillar donde otros lo hacen."
+      },
+      {
+        "titulo": "La brújula perdida",
+        "autor": "Marco Vinicio",
+        "contenido": "Una brújula se perdió en un bosque denso y ya no sabía dónde estaba el norte. Giró y giró desesperada hasta que una vieja tortuga le dijo: 'Deja de moverte tanto y escucha tu interior'. La brújula se quedó quieta, respiró profundo, y lentamente su aguja encontró el norte magnético que siempre había estado ahí.",
+        "moraleja": "Cuando te sientes perdido, la calma te ayuda a encontrar tu dirección interior."
+      }
+    ],
+    "agradecido": [
+      {
+        "titulo": "Las abejas y el zángano",
+        "autor": "Esopo",
+        "contenido": "Un zángano exigía miel diciendo ser parte del trabajo. Las abejas se indignaron: 'Tú no trabajas, no ayudas, no construyes'. Lo expulsaron de la colmena.",
+        "moraleja": "El esfuerzo compartido es lo que da valor a los logros."
+      },
+      {
+        "titulo": "El árbol de los mil frutos",
+        "autor": "Marco Vinicio",
+        "contenido": "Un árbol daba frutos todo el año y los viajeros siempre tomaban sin dar las gracias. Un día llegó una niña que, antes de tomar un fruto, abrazó el tronco y susurró 'gracias'. El árbol se sintió tan feliz que sus frutos se volvieron más dulces y abundantes. La niña regresó cada semana, y el árbol creció fuerte y hermoso, alimentando a todo el pueblo.",
+        "moraleja": "La gratitud nutre tanto al que la da como al que la recibe."
+      }
+    ],
+    "solo": [
+      {
+        "titulo": "El oso y los dos amigos",
+        "autor": "Esopo",
+        "contenido": "Dos amigos caminaban por el bosque. Al ver un oso, uno trepó a un árbol. El otro se tiró al suelo y fingió estar muerto. El oso olfateó y se fue. El primero bajó y preguntó qué le dijo el oso. 'Que los amigos verdaderos no abandonan'.",
+        "moraleja": "La adversidad revela los afectos reales."
+      },
+      {
+        "titulo": "La estrella solitaria",
+        "autor": "Marco Vinicio",
+        "contenido": "Una estrella brillaba sola en una noche sin luna, sintiéndose aislada del resto del cielo. Se lamentaba de su soledad cuando una niña hizo un deseo mirándola. La estrella se dio cuenta de que su luz solitaria era justo lo que la niña necesitaba para encontrar esperanza en la oscuridad. A veces, brillar solo significa ser exactamente lo que alguien necesita.",
+        "moraleja": "Tu presencia única puede ser exactamente lo que el mundo necesita."
+      }
+    ],
+    "motivado": [
+      {
+        "titulo": "La gallina de los huevos de oro",
+        "autor": "Esopo",
+        "contenido": "Un campesino tenía una gallina que ponía huevos de oro. Impaciente por obtener más, la mató para buscar todo el oro dentro... pero no había nada.",
+        "moraleja": "La avaricia rompe el saco."
+      },
+      {
+        "titulo": "El águila que aprendió a volar dos veces",
+        "autor": "Marco Vinicio",
+        "contenido": "Un águila joven tenía miedo de volar alto. Se conformaba con volar bajo, cerca del suelo. Un día, una tormenta la llevó muy alto y descubrió que podía volar entre las nubes. Cuando bajó, les contó a otras águilas jóvenes su descubrimiento. 'Creía que volar bajo era suficiente', dijo, 'pero ahora sé que fui hecha para las alturas'.",
+        "moraleja": "A veces necesitamos ser empujados fuera de nuestra zona de confort para descubrir nuestro verdadero potencial."
+      }
+    ]
+  },
+  "actividades": {
+    "negativa": [
+      "Haz un monólogo imaginario: escribe lo que le dirías a tu 'yo interior' herido.",
+      "Crea una miniobra de teatro: tú eres el protagonista que se reconcilia con su sombra.",
+      "Escribe una carta desde el futuro: ¿qué te dice tu yo dentro de 5 años?",
+      "Baila libremente 3 minutos sin juzgarte, solo siente tu cuerpo.",
+      "Practica respiración consciente: 4 segundos inhalar, 4 mantener, 4 exhalar.",
+      "Cierra los ojos e imagina a alguien sabio que te aconseja desde dentro.",
+      "Cuenta la fábula a alguien y pregúntale qué aprendió.",
+      "Dibuja un símbolo que represente tu emoción de hoy, sin pensar.",
+      "Reescribe una de las fábulas... pero cambiando el final a uno que te anime.",
+      "Representa en tu habitación una escena: tú reconociendo tu fuerza interior.",
+      "Escribe 3 cosas por las que estás agradecido, por pequeñas que sean.",
+      "Sal a caminar 10 minutos y observa 5 cosas hermosas que normalmente ignoras.",
+      "Llama o escribe a alguien que aprecias y dile por qué es importante para ti."
+    ],
+    "positiva": [
+      "Comparte tu alegría: cuenta a alguien qué te hace sentir bien hoy.",
+      "Haz algo creativo que exprese tu estado de ánimo actual.",
+      "Planifica una pequeña aventura para los próximos días.",
+      "Escribe en un diario qué te está funcionando bien en la vida.",
+      "Ayuda a alguien que pueda estar pasando por un momento difícil.",
+      "Aprende algo nuevo que siempre quisiste conocer.",
+      "Organiza o mejora un espacio de tu hogar que te haga feliz.",
+      "Practica un hobby que te apasione por al menos 30 minutos."
+    ],
+    "neutra": [
+      "Medita por 10 minutos observando tus pensamientos sin juzgarlos.",
+      "Haz una lista de pros y contras sobre lo que te confunde.",
+      "Habla con alguien de confianza sobre tus dudas.",
+      "Investiga o lee sobre el tema que te genera confusión.",
+      "Toma un descanso y vuelve al problema más tarde con mente fresca."
+    ]
+  }
+}
