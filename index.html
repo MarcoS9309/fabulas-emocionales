@@ -6,169 +6,146 @@
     <meta name="description" content="Fábulas Emocionales - Descubre fábulas de Esopo y cuentos inspiradores según tu estado emocional. Una experiencia terapéutica y reflexiva.">
     <meta name="keywords" content="fábulas, emociones, Esopo, bienestar, terapia, reflexión, cuentos">
     <meta name="author" content="Marco Vinicio">
+    <meta name="theme-color" content="#70a36f">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Fábulas Emocionales - Cuentos que sanan el alma">
+    <meta property="og:description" content="Descubre fábulas personalizadas según tu estado emocional. Una experiencia interactiva de bienestar.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
     <title>Fábulas Emocionales - Cuentos que sanan el alma</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>¿Cómo te sientes hoy?</h1>
-            <p class="subtitle">Comparte tu emoción y descubre una fábula que te acompañe</p>
-        </header>
-
-        <main>
-            <!-- Sección de entrada de emociones -->
-            <section class="emotion-input">
-                <label for="emotion-text">💭 Cuéntame, ¿cómo te sientes hoy?</label>
-                <input 
-                    type="text" 
-                    id="emotion-text" 
-                    placeholder="Por ejemplo: 'estoy triste', 'me siento genial', 'tengo ansiedad'..."
-                    autocomplete="off"
-                    spellcheck="false"
-                >
-                <div class="buttons">
-                    <button id="analizar-btn">🔍 Encontrar mi fábula</button>
-                </div>
-            </section>
-
-            <!-- Separador con botones rápidos -->
-            <section class="quick-options">
-                <div class="buttons">
-                    <p>¿Prefieres una opción rápida?</p>
-                    <button id="bien-btn">😊 Me siento bien</button>
-                    <button id="mal-btn">😞 Me siento mal</button>
-                </div>
-            </section>
-
-            <!-- Área de respuesta -->
-            <section id="respuesta" aria-live="polite"></section>
-        </main>
-
-        <footer>
-            <p>Creado con ❤️ por <strong>Marco Vinicio</strong> | Inspirado en las atemporales Fábulas de Esopo</p>
-        </footer>
-    </div>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html la            <!-- Sección de entrada de emociones -->
-            <section class="emotion-input">
-                <label for="emotion-text">💭 Cuéntame, ¿cómo te sientes hoy?</label>
-                <input 
-                    type="text" 
-                    id="emotion-text" 
-                    placeholder="Por ejemplo: 'estoy triste', 'me siento genial', 'tengo ansiedad'..."
-                    autocomplete="off"
-                    spellcheck="false"
-                >
-                <div class="buttons">
-                    <button id="analizar-btn">🔍 Encontrar mi fábula</button>
-                </div>
-            </section>
-
-            <!-- Separador con botones rápidos -->
-            <section class="quick-options">
-                <div class="buttons">
-                    <p>¿Prefieres una opción rápida?</p>
-                    <button id="bien-btn">😊 Me siento bien</button>
-                    <button id="mal-btn">😞 Me siento mal</button>
-                </div>
-            </section><meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fábulas Emocionales - Descubre fábulas de Esopo y cuentos inspiradores según tu estado emocional. Una experiencia terapéutica y reflexiva.">
-    <meta name="keywords" content="fábulas, emociones, Esopo, bienestar, terapia, reflexión, cuentos">
-    <meta name="author" content="Marco Vinicio">
-    
-    <title>Fábulas Emocionales - Cuentos que sanan el alma</title>
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Favicon básico -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>¿Cómo te sientes hoy?</h1>
-            <p class="subtitle">Comparte tu emoción y descubre una fábula que te acompañe</p>
-        </header>
-
-        <main>
-            <!-- Sección de entrada de emociones -->
-            <section class="emotion-input">
-                <label for="emotion-text">Escribe cómo te sientes (ej: "estoy triste", "me siento genial", "estoy confundido"):</label>
-                <input 
-                    type="text" 
-                    id="emotion-text" 
-                    placeholder="Expresa tu emoción con tus propias palabras..."
-                    autocomplete="off"
-                    spellcheck="false"
-                >
-                <div class="buttons">
-                    <button id="analizar-btn">🔍 Encontrar mi fábula</button>
-                </div>
-            </section>
-
-            <!-- Botones rápidos -->
-            <section class="buttons">
-                <p style="margin-bottom: 1em; color: var(--color-text-light);">O elige una opción rápida:</p>
-                <button id="bien-btn">😊 Me siento bien</button>
-                <button id="mal-btn">😞 Me siento mal</button>
-            </section>
-
-            <!-- Área de respuesta -->
-            <section id="respuesta" aria-live="polite"></section>
-        </main>
-
-        <footer>
-            <p>Creado con ❤️ por <strong>Marco Vinicio</strong> | Inspirado en las atemporales Fábulas de Esopo</p>
-        </footer>
-    </div>
-
-    <script src="js/main.js"></script>
+        <!-- Enlace de navegación por teclado -->
+        <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
         
-            ],
-            mal: [
-                "El zorro y las uvas — Un zorro hambriento intentó alcanzar unas uvas altas sin éxito. Tras muchos saltos fallidos, se alejó murmurando: 'Seguro están verdes'. Moraleja: Es fácil despreciar lo que no se puede conseguir.",
-                "El lobo y el cordero — Un cordero bebía en un río y un lobo, buscando pretexto para devorarlo, lo acusó de ensuciar el agua. Aunque el cordero argumentó con lógica, el lobo lo devoró igual. Moraleja: La fuerza sin justicia es crueldad.",
-                "El cisne y el búho — El búho se burlaba del canto del cisne. Este respondió: “Yo canto en la luz del día, tú sólo en la oscuridad. Ambos tenemos nuestro momento”. Moraleja: Cada uno tiene su tiempo para brillar.",
-                "El burro vestido de león — Un burro se disfrazó de león y asustaba a todos. Pero su rebuzno lo delató. Moraleja: Puedes disfrazarte de lo que quieras, pero tu esencia siempre se revela.",
-                "El gallo y la perla — Un gallo encontró una perla entre la paja. “No me sirve”, dijo, “prefiero un grano de trigo”. Moraleja: A veces no reconocemos el verdadero valor de lo que encontramos.",
-                "Las ranas que pedían rey — Las ranas vivían libres pero pidieron un rey. Zeus les envió un tronco. Lo despreciaron por inútil. Pidieron otro y Zeus les envió una garza... que comenzó a devorarlas. Moraleja: Cuidado con lo que deseas.",
-                "El zorro sin cola — Un zorro perdió su cola en una trampa. Avergonzado, intentó convencer a los demás de que era mejor estar sin ella. Uno le respondió: “Sólo quieres que todos suframos lo que tú”. Moraleja: No impongas a otros tus desgracias.",
-                "El pavo y el ruiseñor — El pavo envidiaba el canto del ruiseñor. “Yo soy más grande y más fuerte”, decía. El ruiseñor respondió: “Pero yo alivio corazones tristes”. Moraleja: No todo lo valioso se mide en tamaño.",
-                "El oso y los dos amigos — Dos amigos caminaban por el bosque. Al ver un oso, uno trepó a un árbol. El otro se tiró al suelo y fingió estar muerto. El oso olfateó y se fue. El primero bajó y preguntó qué le dijo el oso. “Que los amigos verdaderos no abandonan”. Moraleja: La adversidad revela los afectos reales.",
-                "El búho y el águila — El águila presumía de su fuerza y vista. El búho respondió: “Yo no vuelo tan alto, pero veo en la oscuridad, donde tú no”. Moraleja: Cada virtud es única. No necesitas brillar donde otros lo hacen."
-            ]
-        };
+        <header>
+            <h1 class="animate-on-scroll">
+                <span class="icon-text">📚</span>
+                Fábulas Emocionales
+            </h1>
+            <p class="subtitle animate-on-scroll">Descubre la fábula perfecta para tu estado emocional</p>
+        </header>
 
-        const propuestas = [
-            "Haz un monólogo imaginario: escribe lo que le dirías a tu 'yo interior' herido.",
-            "Crea una miniobra de teatro: tú eres el protagonista que se reconcilia con su sombra.",
-            "Escribe una carta desde el futuro: ¿qué te dice tu yo dentro de 5 años?",
-            "Baila libremente 3 minutos sin juzgarte, solo siente tu cuerpo.",
-            "Practica respiración consciente: 4 segundos inhalar, 4 mantener, 4 exhalar.",
-            "Cierra los ojos e imagina a alguien sabio que te aconseja desde dentro.",
-            "Cuenta la fábula a alguien y pregúntale qué aprendió.",
-            "Dibuja un símbolo que represente tu emoción de hoy, sin pensar.",
-            "Reescribe una de las fábulas... pero cambiando el final a uno que te anime.",
-            "Representa en tu habitación una escena: tú reconociendo tu fuerza interior."
-        ];
-
-        function mostrarFabula(estado) {
-            const fabula = fabulas[estado][Math.floor(Math.random() * fabulas[estado].length)];
-            const propuesta = estado === 'mal' ? propuestas[Math.floor(Math.random() * propuestas.length)] : '';
-            document.getElementById('respuesta').innerHTML = `
-                <div class="fabula">
-                    <h2>Fábula del día:</h2>
-                    <p>${fabula}</p>
-                    ${propuesta ? `<p class="propuesta"><strong>¿Una idea para ti?</strong><br>${propuesta}</p>` : ''}
+        <main id="main-content" role="main">
+            <section class="emotion-input animate-on-scroll" aria-labelledby="emotion-section">
+                <h2 id="emotion-section" class="sr-only">Análisis de Emociones</h2>
+                <label for="emotion-text">
+                    <span class="label-icon">💭</span>
+                    ¿Cómo te sientes hoy?
+                </label>
+                <div class="input-wrapper">
+                    <textarea 
+                        id="emotion-text" 
+                        placeholder="Describe tu estado emocional, lo que sientes, o simplemente comparte lo que tienes en mente..."
+                        rows="3"
+                        aria-describedby="emotion-help"
+                        maxlength="500">
+                    </textarea>
+                    <div class="char-counter">
+                        <span id="char-count">0</span>/500
+                    </div>
                 </div>
-            `;
-        }
+                <p id="emotion-help" class="help-text">
+                    Expresa libremente tus emociones. Nuestro sistema analizará tu texto y te sugerirá la fábula más apropiada.
+                </p>
+                <div class="buttons">
+                    <button id="analizar-btn" type="button" class="primary-btn" aria-describedby="analyze-help">
+                        <span class="btn-icon">🔍</span>
+                        <span class="btn-text">Encuentra mi fábula</span>
+                    </button>
+                </div>
+                <p id="analyze-help" class="help-text small">
+                    También puedes usar las opciones rápidas de abajo
+                </p>
+            </section>
+
+            <section class="quick-options animate-on-scroll" aria-labelledby="quick-section">
+                <h2 id="quick-section">Opciones Rápidas</h2>
+                <p class="section-subtitle">¿Prefieres una selección directa? Elige tu estado emocional:</p>
+                <div class="buttons stagger-animation">
+                    <button class="emotion-btn stagger-child" data-emotion="feliz" type="button">
+                        <span class="btn-icon">😊</span>
+                        <span class="btn-text">Feliz</span>
+                    </button>
+                    <button class="emotion-btn stagger-child" data-emotion="triste" type="button">
+                        <span class="btn-icon">😢</span>
+                        <span class="btn-text">Triste</span>
+                    </button>
+                    <button class="emotion-btn stagger-child" data-emotion="preocupado" type="button">
+                        <span class="btn-icon">😰</span>
+                        <span class="btn-text">Preocupado</span>
+                    </button>
+                    <button class="emotion-btn stagger-child" data-emotion="confundido" type="button">
+                        <span class="btn-icon">😕</span>
+                        <span class="btn-text">Confundido</span>
+                    </button>
+                    <button class="emotion-btn stagger-child" data-emotion="motivado" type="button">
+                        <span class="btn-icon">💪</span>
+                        <span class="btn-text">Motivado</span>
+                    </button>
+                    <button class="emotion-btn stagger-child" data-emotion="reflexivo" type="button">
+                        <span class="btn-icon">🤔</span>
+                        <span class="btn-text">Reflexivo</span>
+                    </button>
+                </div>
+            </section>
+
+            <section id="respuesta" class="response-section" aria-live="polite" aria-label="Resultado del análisis emocional">
+                <!-- Aquí se mostrará la fábula recomendada -->
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                Creado con <span class="heart" aria-label="amor">❤️</span> para tu bienestar emocional por 
+                <strong>Marco Vinicio</strong>
+            </p>
+            <p class="footer-note">
+                Las fábulas son herramientas de reflexión. Siempre busca ayuda profesional si necesitas apoyo emocional.
+            </p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Inicializar sistema de animaciones
+        document.addEventListener('DOMContentLoaded', () => {
+            window.animationSystem = new AnimationSystem();
+            
+            // Agregar efectos de ripple a botones
+            document.addEventListener('click', (e) => {
+                if (e.target.matches('button:not(.no-ripple)')) {
+                    window.animationSystem.rippleEffect(e.target, e);
+                }
+            });
+            
+            // Contador de caracteres
+            const textArea = document.getElementById('emotion-text');
+            const charCount = document.getElementById('char-count');
+            
+            if (textArea && charCount) {
+                textArea.addEventListener('input', () => {
+                    const count = textArea.value.length;
+                    charCount.textContent = count;
+                    
+                    // Cambiar color según proximidad al límite
+                    if (count > 450) {
+                        charCount.style.color = 'var(--color-accent)';
+                    } else if (count > 400) {
+                        charCount.style.color = 'var(--color-secondary)';
+                    } else {
+                        charCount.style.color = 'var(--color-text-light)';
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>

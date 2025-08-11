@@ -44,19 +44,75 @@ class FabulasEmocionales {
 
   configurarEventos() {
     const btnAnalizar = document.getElementById('analizar-btn');
-    const btnBien = document.getElementById('bien-btn');
-    const btnMal = document.getElementById('mal-btn');
     const inputEmocion = document.getElementById('emotion-text');
 
-    if (btnAnalizar) btnAnalizar.addEventListener('click', () => this.analizarEmocion());
-    if (btnBien) btnBien.addEventListener('click', () => this.mostrarFabula('bien'));
-    if (btnMal) btnMal.addEventListener('click', () => this.mostrarFabula('mal'));
+    // Configurar botón principal
+    if (btnAnalizar) {
+      btnAnalizar.addEventListener('click', () => this.analizarEmocion());
+    }
 
+    // Configurar botones de emociones rápidas
+    document.querySelectorAll('.emotion-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const emotion = button.dataset.emotion;
+        this.procesarEmocionRapida(emotion);
+      });
+    });
+
+    // Configurar textarea
     if (inputEmocion) {
       inputEmocion.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') this.analizarEmocion();
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          this.analizarEmocion();
+        }
+      });
+
+      // Auto-resize del textarea
+      inputEmocion.addEventListener('input', () => {
+        this.autoResizeTextarea(inputEmocion);
       });
     }
+  }
+
+  /**
+   * Auto-redimensiona el textarea según el contenido
+   */
+  autoResizeTextarea(textarea) {
+    textarea.style.height = 'auto';
+    textarea.style.height = Math.max(textarea.scrollHeight, 80) + 'px';
+  }
+
+  /**
+   * Procesa una emoción seleccionada rápidamente
+   */
+  async procesarEmocionRapida(emotion) {
+    const textarea = document.getElementById('emotion-text');
+    
+    // Mapear emociones a texto descriptivo
+    const descripcionesEmociones = {
+      feliz: 'Me siento muy feliz y lleno de energía',
+      triste: 'Me siento triste y necesito algo de inspiración',
+      preocupado: 'Estoy preocupado por algunas cosas en mi vida',
+      confundido: 'Me siento confundido y no sé qué hacer',
+      motivado: 'Me siento motivado y quiero seguir adelante',
+      reflexivo: 'Estoy en un momento reflexivo y pensativo'
+    };
+    
+    if (textarea) {
+      textarea.value = descripcionesEmociones[emotion] || `Me siento ${emotion}`;
+      this.autoResizeTextarea(textarea);
+      
+      // Activar animaciones si están disponibles
+      if (window.animationSystem) {
+        window.animationSystem.pulseElement(textarea);
+      }
+    }
+    
+    // Procesar automáticamente después de un breve delay
+    setTimeout(() => {
+      this.analizarEmocion();
+    }, 300);
   }
 
   analizarEmocion() {
@@ -123,36 +179,150 @@ class FabulasEmocionales {
     return { clave: 'confundido', nombre: 'reflexivo', tipo: 'neutra' };
   }
 
-  mostrarFabula(emocionClave, emocionNombre = null, textoOriginal = null) {
+  async mostrarFabula(emocionClave, emocionNombre = null, textoOriginal = null) {
     const respuestaDiv = document.getElementById('respuesta');
 
-    if (!this.datos?.fabulas || !this.datos.fabulas[emocionClave]) {
-      this.mostrarMensaje('No se encontraron fábulas para esta emoción.', 'error');
-      return;
+    // Activar estado de carga en el botón
+    const btnAnalizar = document.getElementById('analizar-btn');
+    if (btnAnalizar && window.animationSystem) {
+      window.animationSystem.buttonLoadingState(btnAnalizar, true);
     }
 
-    let fabulas = this.datos.fabulas[emocionClave] || [];
-    if (!Array.isArray(fabulas) || fabulas.length === 0) {
-      fabulas = this.datos.fabulas['confundido'] || this.datos.fabulas['bien'] || [];
-      if (!fabulas.length) {
-        this.mostrarMensaje('No hay fábulas disponibles en este momento.', 'error');
+    try {
+      if (!this.datos?.fabulas || !this.datos.fabulas[emocionClave]) {
+        this.mostrarMensaje('No se encontraron fábulas para esta emoción.', 'error');
         return;
       }
+
+      let fabulas = this.datos.fabulas[emocionClave] || [];
+      if (!Array.isArray(fabulas) || fabulas.length === 0) {
+        fabulas = this.datos.fabulas['confundido'] || this.datos.fabulas['bien'] || [];
+        if (!fabulas.length) {
+          this.mostrarMensaje('No hay fábulas disponibles en este momento.', 'error');
+          return;
+        }
+      }
+
+      const fabulaSeleccionada = fabulas[Math.floor(Math.random() * fabulas.length)];
+      const actividad = this.seleccionarActividad(emocionClave);
+
+      // Crear el HTML de la fábula con estructura mejorada
+      const fabulaHTML = this.generarHTMLFabula(
+        fabulaSeleccionada, 
+        actividad, 
+        emocionNombre, 
+        textoOriginal
+      );
+      
+      // Animar el cambio de contenido si hay sistema de animaciones
+      if (window.animationSystem) {
+        await window.animationSystem.morphContent(respuestaDiv, fabulaHTML);
+        // Agregar efecto de celebración
+        setTimeout(() => {
+          if (window.animationSystem) {
+            window.animationSystem.celebrationEffect(respuestaDiv);
+          }
+        }, 500);
+      } else {
+        respuestaDiv.innerHTML = fabulaHTML;
+      }
+
+      // Configurar eventos para los nuevos elementos
+      this.configurarEventosFabula();
+      
+      // Scroll suave hacia la respuesta
+      setTimeout(() => {
+        respuestaDiv.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }, 100);
+
+    } catch (error) {
+      console.error('Error al mostrar fábula:', error);
+      this.mostrarMensaje('Hubo un problema al cargar la fábula. Por favor, intenta de nuevo.', 'error');
+    } finally {
+      // Quitar estado de carga del botón
+      if (btnAnalizar && window.animationSystem) {
+        setTimeout(() => {
+          window.animationSystem.buttonLoadingState(btnAnalizar, false);
+        }, 1000);
+      }
     }
-
-    const fabulaSeleccionada = fabulas[Math.floor(Math.random() * fabulas.length)];
-
-    const tipoEmocion = this.datos.emociones[emocionClave]?.tipo || 'neutra';
-    const actividad = this.obtenerActividad(tipoEmocion);
-
-    const html = this.generarHTMLFabula(fabulaSeleccionada, emocionNombre, textoOriginal, actividad, tipoEmocion);
-
-    respuestaDiv.innerHTML = html;
-    respuestaDiv.scrollIntoView({ behavior: 'smooth' });
   }
 
-  obtenerActividad(tipoEmocion) {
-    const actividades = this.datos.actividades[tipoEmocion] || this.datos.actividades['neutra'];
+  /**
+   * Configura eventos para elementos dentro de la fábula mostrada
+   */
+  configurarEventosFabula() {
+    // Botón para nueva fábula
+    const btnNueva = document.querySelector('.btn-nueva-fabula');
+    if (btnNueva) {
+      btnNueva.addEventListener('click', () => {
+        const input = document.getElementById('emotion-text');
+        if (input) {
+          input.focus();
+          input.value = '';
+          this.autoResizeTextarea(input);
+        }
+        // Limpiar respuesta con animación
+        const respuesta = document.getElementById('respuesta');
+        if (respuesta && window.animationSystem) {
+          window.animationSystem.morphContent(respuesta, '');
+        } else if (respuesta) {
+          respuesta.innerHTML = '';
+        }
+      });
+    }
+
+    // Botón para compartir
+    const btnCompartir = document.querySelector('.btn-compartir');
+    if (btnCompartir) {
+      btnCompartir.addEventListener('click', () => {
+        this.compartirFabula();
+      });
+    }
+  }
+
+  /**
+   * Funcionalidad para compartir la fábula
+   */
+  async compartirFabula() {
+    const titulo = document.querySelector('.fabula h2')?.textContent || 'Fábula Emocional';
+    const contenido = document.querySelector('.fabula-content p')?.textContent || '';
+    const moraleja = document.querySelector('.moraleja')?.textContent || '';
+    
+    const textoCompleto = `${titulo}\n\n${contenido}\n\n${moraleja}\n\n🔗 Fábulas Emocionales - Encuentra tu historia perfecta`;
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: titulo,
+          text: textoCompleto,
+          url: window.location.href
+        });
+      } else if (navigator.clipboard) {
+        await navigator.clipboard.writeText(textoCompleto);
+        this.mostrarMensaje('¡Fábula copiada al portapapeles!', 'success');
+      } else {
+        // Fallback: seleccionar texto
+        const textArea = document.createElement('textarea');
+        textArea.value = textoCompleto;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        this.mostrarMensaje('¡Fábula copiada al portapapeles!', 'success');
+      }
+    } catch (error) {
+      console.error('Error al compartir:', error);
+      this.mostrarMensaje('No se pudo compartir la fábula', 'warning');
+    }
+  }
+
+  seleccionarActividad(emocionClave) {
+    const tipoEmocion = this.datos.emociones?.[emocionClave]?.tipo || 'neutra';
+    const actividades = this.datos.actividades?.[tipoEmocion] || this.datos.actividades?.['neutra'];
     if (!actividades || actividades.length === 0) return null;
     return actividades[Math.floor(Math.random() * actividades.length)];
   }
